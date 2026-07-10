@@ -137,3 +137,51 @@ The database is designed for:
 - CRM
 - Mobile App
 - Accounting
+
+---
+
+# Employee Module
+
+## Purpose
+
+The Employee module stores all staff information and serves as the foundation for Attendance, Payroll, Leave Management, Task Management, and Reporting.
+
+## Main Table
+
+**employees**
+
+### Core Information
+
+- Employee Code
+- Full Name
+- Phone Number
+- Email Address
+- National ID (NID)
+- Date of Birth
+- Blood Group
+- Father's Name
+- Educational Background
+
+### Employment Information
+
+- Department
+- Primary Designation
+- Joining Date
+- Employment Status
+- Basic Salary
+
+### Contact Information
+
+- Permanent Address
+- Temporary Address
+- Emergency Contact Name
+- Emergency Contact Relationship
+- Emergency Contact Number
+
+### System Information
+
+- System Role
+- Login PIN (Hashed)
+- Profile Photo URL
+- Created At
+- Updated At
