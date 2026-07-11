@@ -185,3 +185,46 @@ The Employee module stores all staff information and serves as the foundation fo
 - Profile Photo URL
 - Created At
 - Updated At
+
+---
+
+## Employees Table
+
+| Field | Type | Required | Description |
+|------|------|----------|-------------|
+| id | UUID | Yes | Primary Key |
+| employee_code | VARCHAR(20) | Yes | Unique Employee Code |
+| full_name | VARCHAR(150) | Yes | Employee Full Name |
+| phone | VARCHAR(20) | Yes | Primary Contact Number |
+| email | VARCHAR(150) | No | Email Address |
+| nid_number | VARCHAR(30) | No | National ID Number |
+| date_of_birth | DATE | No | Birth Date |
+| blood_group | VARCHAR(5) | No | Blood Group |
+| father_name | VARCHAR(150) | No | Father's Name |
+| mother_name | VARCHAR(150) | No | Mother's Name |
+| education | TEXT | No | Educational Background |
+| permanent_address | TEXT | No | Permanent Address |
+| present_address | TEXT | No | Present Address |
+| emergency_contact_name | VARCHAR(150) | No | Emergency Contact Name |
+| emergency_contact_relation | VARCHAR(50) | No | Relation |
+| emergency_contact_phone | VARCHAR(20) | No | Emergency Contact Number |
+| department_id | UUID | Yes | Reference to Departments |
+| role_id | UUID | Yes | Reference to Roles |
+| joining_date | DATE | Yes | Joining Date |
+| basic_salary | NUMERIC(12,2) | Yes | Basic Salary |
+| status | VARCHAR(20) | Yes | Active / Inactive / On Leave |
+| pin_hash | TEXT | Yes | Hashed Login PIN |
+| profile_photo_url | TEXT | No | Profile Photo |
+| created_at | TIMESTAMPTZ | Yes | Created Time |
+| updated_at | TIMESTAMPTZ | Yes | Updated Time |
+
+---
+
+## Employee Status
+
+| Value | Meaning |
+|------|---------|
+| ACTIVE | Currently Working |
+| INACTIVE | Temporarily Disabled |
+| ON_LEAVE | Employee on Leave |
+| TERMINATED | Employment Ended |
