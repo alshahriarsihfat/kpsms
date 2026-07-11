@@ -39,7 +39,10 @@ create table employees (
 
     basic_salary numeric(12,2) not null default 0,
 
-    status varchar(20) not null default 'ACTIVE',
+    status varchar(20)
+not null
+default 'ACTIVE'
+check (status in ('ACTIVE', 'INACTIVE', 'ON_LEAVE', 'TERMINATED')),
 
     pin_hash text not null,
 
@@ -49,3 +52,20 @@ create table employees (
 
     updated_at timestamptz not null default now()
 );
+
+---
+
+create index idx_employees_department
+on employees(department_id);
+
+create index idx_employees_role
+on employees(role_id);
+
+create index idx_employees_status
+on employees(status);
+
+create index idx_employees_phone
+on employees(phone);
+
+create index idx_employees_joining_date
+on employees(joining_date);
