@@ -228,3 +228,23 @@ The Employee module stores all staff information and serves as the foundation fo
 | INACTIVE | Temporarily Disabled |
 | ON_LEAVE | Employee on Leave |
 | TERMINATED | Employment Ended |
+
+---
+
+# Entity Relationship
+
+## Tables
+
+- departments
+- roles
+- designations
+- employees
+- employee_designations
+
+## Relationships
+
+departments (1) ------< employees
+
+roles (1) ------< employees
+
+employees (1) ------< employee_designations >------ (1) designations

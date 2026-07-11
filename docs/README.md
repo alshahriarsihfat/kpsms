@@ -28,6 +28,14 @@ Welcome to the official documentation of the Khan Pharmacy Staff Management & Pa
 
 ---
 
+## Migration Order
+
+1. 001_create_departments.sql
+2. 002_create_roles.sql
+3. 003_create_designations.sql
+4. 004_create_employees.sql
+5. 005_create_employee_designations.sql
+
 **Project:** Khan Pharmacy Staff Management & Payroll System (KPSMS)
 
 **Version:** 1.0.0
