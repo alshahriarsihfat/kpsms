@@ -9,6 +9,8 @@ create table system_settings (
 
     category varchar(50) not null,
 
+    setting_group varchar(50),
+
     description text,
 
     is_editable boolean not null default true,
@@ -20,5 +22,3 @@ create table system_settings (
 
 create index idx_system_settings_category
 on system_settings(category);
-
-setting_group varchar(50),

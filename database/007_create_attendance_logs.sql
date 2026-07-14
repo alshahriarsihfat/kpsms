@@ -5,10 +5,14 @@ create table attendance_logs (
 
     action varchar(30) not null,
 
+    is_paid boolean not null default true,
+
+    duration_minutes integer,
+
     event_time timestamptz not null default now(),
 
     performed_by uuid not null references employees(id),
-    
+
     performed_as varchar(20) not null,
 
     reason text,
@@ -26,7 +30,3 @@ on attendance_logs(event_time);
 
 create index idx_attendance_logs_action
 on attendance_logs(action);
-
-is_paid boolean not null default true,
-
-duration_minutes integer,

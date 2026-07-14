@@ -23,6 +23,10 @@ create table attendance_sessions (
 
     overtime_minutes integer not null default 0,
 
+    paid_salary numeric(12,2) not null default 0,
+
+    unpaid_deduction numeric(12,2) not null default 0,
+
     status varchar(20) not null default 'PRESENT',
 
     created_at timestamptz not null default now(),
@@ -37,7 +41,3 @@ on attendance_sessions(employee_id);
 
 create index idx_attendance_sessions_date
 on attendance_sessions(attendance_date);
-
-paid_salary numeric(12,2) not null default 0,
-
-unpaid_deduction numeric(12,2) not null default 0,
